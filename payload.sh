@@ -1,7 +1,8 @@
 #!/bin/sh
 
 #Téléchargement charge malveillante
-wget 'https://secure.eicar.org/eicar.com.zip'
+wget 'https://secure.eicar.org/eicar.com'
+wget 'https://secure.eicar.org/eicar.com.txt'
 
 #Persistance
 cp ./payload.sh /tmp/payload.sh
