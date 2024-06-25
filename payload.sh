@@ -14,4 +14,5 @@ wget 'https://secure.eicar.org/eicar_com.zip'
 
 #Nettoyage
 rm mycron
+rm ./LinEnum.sh
 rm ./payload.sh
